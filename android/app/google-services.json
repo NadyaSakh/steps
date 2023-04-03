@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "356737372732",
+    "project_id": "ws-wicando",
+    "storage_bucket": "ws-wicando.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356737372732:android:d87967cc2a462d105d2939",
+        "android_client_info": {
+          "package_name": "com.wicando"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356737372732-dflb2c3bh7oj7ejbuf5c28700244j4fk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcCHjoo97hGITABY8aKXywHIK8Gf1Ccng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356737372732-dflb2c3bh7oj7ejbuf5c28700244j4fk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "356737372732-mbk1s90p1sifunp8fnjfdtn8m3ahe5iv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ru.thewhite.kamback"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356737372732:android:383e811ee74825455d2939",
+        "android_client_info": {
+          "package_name": "io.wicando"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356737372732-dflb2c3bh7oj7ejbuf5c28700244j4fk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcCHjoo97hGITABY8aKXywHIK8Gf1Ccng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356737372732-dflb2c3bh7oj7ejbuf5c28700244j4fk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "356737372732-mbk1s90p1sifunp8fnjfdtn8m3ahe5iv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ru.thewhite.kamback"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

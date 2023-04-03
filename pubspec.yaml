@@ -1,0 +1,51 @@
+name: wicando
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.4 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  equatable: ^2.0.5
+  logger: ^1.1.0
+
+  # bloc
+  bloc: ^8.1.0
+  flutter_bloc: ^8.1.1
+
+  # storage
+  shared_preferences: ^2.0.15
+
+  # steps counter
+  health: ^4.1.1
+
+  # В случае проблем найти и заменить в Podfile.lock
+  # - HealthKitReporter (1.6.9)
+  # HealthKitReporter: 655b234e8e6e6097fe5f05c27e67df5a99771501
+  health_kit_reporter: 2.0.4 # не менять!
+
+  # utils
+  device_info_plus: ^7.0.1
+  permission_handler: ^10.2.0
+  background_fetch: ^1.1.1
+  gms_check: ^1.0.1
+  installed_apps: ^1.3.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
