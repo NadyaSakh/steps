@@ -80,7 +80,7 @@ class _WalkingActivityState extends State<WalkingActivity> with WidgetsBindingOb
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Subtitle(
-                    'Пройти 10 000 шагов',
+                    'Walk 10,000 steps in a day',
                     color: AppColors.slateGray,
                     textAlign: TextAlign.center,
                     fontWeight: FontWeight.bold,
@@ -124,7 +124,7 @@ class _WalkingActivityState extends State<WalkingActivity> with WidgetsBindingOb
 
   void _onActivityStateChanged(WalkingState state) {
     if (state.status == ActivityStatus.COMPLETED) {
-      showSuccessToast(context, 'Активность `10 000` шагов выполнена!');
+      showSuccessToast(context, 'Activity `10,000` steps completed!');
     }
   }
 
@@ -138,7 +138,7 @@ class _WalkingActivityState extends State<WalkingActivity> with WidgetsBindingOb
         if (mounted) {
           showInfoToast(
             context,
-            'Для отслеживания пройденных шагов нужно установить Google Fit',
+            'To track the steps taken, you need to install Google Fit',
           );
         }
       }
@@ -147,7 +147,7 @@ class _WalkingActivityState extends State<WalkingActivity> with WidgetsBindingOb
         if (mounted) {
           showInfoToast(
             context,
-            'Для отслеживания пройденных шагов нужно разрешить приложению доступ к шагомеру',
+            'To track the steps taken, you need to allow the app access to the pedometer',
           );
         }
       }
@@ -156,7 +156,7 @@ class _WalkingActivityState extends State<WalkingActivity> with WidgetsBindingOb
         if (mounted) {
           showInfoToast(
             context,
-            'Для отслеживания пройденных шагов нужно разрешить приложению интеграцию с Google Fit',
+            'To track the steps taken, you need to allow the application to integrate with Google Fit',
           );
         }
       }
@@ -171,7 +171,7 @@ class _WalkingActivityState extends State<WalkingActivity> with WidgetsBindingOb
         if (mounted) {
           showInfoToast(
             context,
-            'Для отслеживания пройденных шагов нужно разрешить приложению интеграцию с Здоровье',
+            'To track the steps taken, you need to allow the application to integrate with Health',
           );
         }
       }
@@ -207,24 +207,24 @@ class _WalkingActivityState extends State<WalkingActivity> with WidgetsBindingOb
   }
 
   Widget _headlineByStatus(WalkingState state) {
-    var textByStatus = Platform.isAndroid ? 'Установить Google Fit' : 'Настроить';
+    var textByStatus = Platform.isAndroid ? 'Install Google Fit' : 'Configure';
 
     if (Platform.isAndroid) {
       if (_walkingActivityStatus == PermissionStatus.granted) {
         if (state.status == ActivityStatus.COMPLETED) {
-          textByStatus = 'Сегодня цель достигнута!';
+          textByStatus = 'Today the goal has been achieved!';
         } else if (_allowUseGoogleFit ?? false) {
-          textByStatus = '${state.stepCount} шагов пройдено';
+          textByStatus = '${state.stepCount} steps completed';
         } else {
-          textByStatus = 'Активировать\nGoogle Fit';
+          textByStatus = 'Activate\nGoogle Fit';
         }
       }
     } else {
       if (_walkingActivityStatus == PermissionStatus.granted) {
         if (state.status == ActivityStatus.COMPLETED) {
-          textByStatus = 'Сегодня цель достигнута!';
+          textByStatus = 'Today the goal has been achieved!';
         } else {
-          textByStatus = '${state.stepCount} шагов пройдено';
+          textByStatus = '${state.stepCount} steps completed';
         }
       }
     }
@@ -243,14 +243,14 @@ class _WalkingActivityState extends State<WalkingActivity> with WidgetsBindingOb
       if (_walkingActivityStatus == PermissionStatus.granted) {
         if (state.status != ActivityStatus.COMPLETED && _allowUseGoogleFit != true) {
           textByStatus =
-              'Активация Google Fit позволит приложению считывать пройденные вами шаги. Вы можете отключиться от Google Fit в любое время в настройках приложения.';
+              'Activating Google Fit will allow the app to read the steps you have taken. You can disconnect from Google Fit at any time in the app settings.';
         }
       } else {
-        textByStatus = 'Для настройки шагомера необходимо установить Google Fit';
+        textByStatus = 'To set up the pedometer, you need to install Google Fit';
       }
     } else {
       if (_walkingActivityStatus != PermissionStatus.granted) {
-        textByStatus = 'Необходимо настроить синхронизацию шагов с приложением Здоровье';
+        textByStatus = 'You need to set up synchronization of steps with the Health app';
       }
     }
 

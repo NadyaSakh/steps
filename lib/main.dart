@@ -49,7 +49,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const MyHomePage(title: 'Your steps'),
       builder: (context, child) {
         return MultiBlocProvider(
           providers: [
@@ -59,7 +58,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ],
-          child: const MyHomePage(title: 'Your steps'),
+          child: const MyHomePage(title: 'Wicando steps counter'),
         );
       },
     );
