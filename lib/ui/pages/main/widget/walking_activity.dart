@@ -264,13 +264,7 @@ class _WalkingActivityState extends State<WalkingActivity> with WidgetsBindingOb
   Future<void> _checkStepsAuthorization() async {
     if (Platform.isAndroid) {
       final androidInfo = await DeviceInfoPlugin().androidInfo;
-
-      PermissionStatus currentStatus;
-      if (androidInfo.version.sdkInt <= 29) {
-        currentStatus = PermissionStatus.granted;
-      } else {
-        currentStatus = await Permission.activityRecognition.status;
-      }
+      const currentStatus = PermissionStatus.granted;
 
       try {
         // проверяем установлен ли Google Fit
