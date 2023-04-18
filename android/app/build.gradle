@@ -46,7 +46,7 @@ android {
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        archivesBaseName = "wicando_v${versionName}+${versionCode}"
+        archivesBaseName = "wisteps_v${versionName}+${versionCode}"
     }
 
     signingConfigs {
