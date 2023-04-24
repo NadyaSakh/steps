@@ -1,4 +1,4 @@
-package io.wicando;
+package ru.wisteps;
 
 import io.flutter.embedding.android.FlutterActivity;
 
